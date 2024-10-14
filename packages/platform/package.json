@@ -1,0 +1,38 @@
+{
+  "name": "platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5566",
+    "build": "next build",
+    "start": "next start -p 5566",
+    "lint": "next lint",
+    "pm2start": "pm2 start yarn -n platform -- run start"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "~2.63.3",
+    "@lucky-canvas/react": "^0.1.13",
+    "@types/js-cookie": "^3.0.6",
+    "@types/json5": "^2.2.0",
+    "axios": "^1.7.4",
+    "date-fns": "^3.6.0",
+    "js-cookie": "^3.0.5",
+    "mobx": "^6.13.1",
+    "mobx-react-lite": "^4.0.7",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "swiper": "~11.1.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "mobx-react-devtools": "^6.1.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
