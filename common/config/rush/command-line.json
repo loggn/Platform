@@ -4,13 +4,23 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
-
   /**
    * Custom "commands" introduce new verbs for the command-line.  To see the help for these
    * example commands, try "rush --help", "rush my-bulk-command --help", or
    * "rush my-global-command --help".
    */
   "commands": [
+    {
+      /**
+      *（必须）用于确定自定义指令的类型。
+      * Rush 的 "global" 类型的指令会在整个仓库调用一次。
+      */
+      "commandKind": "global",
+      "name": "test",
+      "summary": "Example global custom command",
+      "description": "Run this command to test the command",
+      "shellCommand": "echo \"hello world\""
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom command.
@@ -176,7 +186,6 @@
     //   // "autoinstallerName": "my-task"
     // }
   ],
-
   /**
    * Custom "parameters" introduce new parameters for specified Rush command-line commands.
    * For example, you might define a "--production" parameter for the "rush build" command.

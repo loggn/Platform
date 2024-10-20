@@ -2,15 +2,50 @@
 
 ## 简介
 
-该系统主要用于为各种需要管理的小型平台提供框架，其包含platform前台设计与服务端搭建
+该系统主要用于为各种需要管理的小型平台提供框架，其包含 platform 前台设计与服务端搭建
 
-### Git Commit规范
+## 开发
+
+### 快速开始
+
+```bash
+# 克隆项目
+$ git clone git@github.com:Lycoiref/Platform.git
+
+# 安装rush (若已安装，请跳过此步骤)
+$ npm install -g @microsoft/rush
+
+# 进入项目目录
+$ cd Platform
+
+# 安装依赖
+$ rush update
+
+# 启动调试
+$ cd packages/platform-core
+$ rushx dev
+```
+
+ps: 更多 rush 命令请参考 [rush 文档](https://rushjs.io/zh-cn/pages/intro/welcome/)
+
+## 技术栈
+
+-   Next
+-   Golang , Java , Rust
+
+# 架构设计
+
+Monorepo 架构
+
+WIP...
+
+### Git Commit 规范
 
 feat： 新增 feature
 
 fix: 修复 bug
 
-docs: 仅仅修改了文档，比如 README, CHANGELOG, CONTRIBUTE等等
+docs: 仅仅修改了文档，比如 README, CHANGELOG, CONTRIBUTE 等等
 
 style: 仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑
 
@@ -23,29 +58,3 @@ test: 测试用例，包括单元测试、集成测试等
 chore: 改变构建流程、或者增加依赖库、工具等
 
 revert: 回滚到上一个版本
-
-## 开发
-
-### 快速开始
-```
-# 克隆项目
-$ git clone git@github.com:Lycoiref/Platform.git
-
-# 安装rush (若已安装，请跳过此步骤) 
-$ npm install -g @microsoft/rush 
-
-# 进入项目目录
-$ cd Platform
-
-# 安装依赖
-$ rush update
-
-# 启动调试
-$ cd packages
-$ cd platform-core
-$ rushx dev
-```
-## 技术栈
-- Next
-- Golang , Java , Rust   
-
