@@ -16,10 +16,10 @@
       * Rush 的 "global" 类型的指令会在整个仓库调用一次。
       */
       "commandKind": "global",
-      "name": "test",
-      "summary": "Example global custom command",
-      "description": "Run this command to test the command",
-      "shellCommand": "echo \"hello world\""
+      "name": "dev:server",
+      "summary": "启动后端调试服务（自动更新依赖）",
+      "description": "启动后端调试服务（自动更新依赖）",
+      "shellCommand": "node common/scripts/dev-server.mjs"
     }
     // {
     //   /**

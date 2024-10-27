@@ -24,6 +24,9 @@ $ rush update
 # 启动调试
 $ cd packages/platform-core
 $ rushx dev
+
+# 启动服务端调试
+$ rush dev:server
 ```
 
 ps: 更多 rush 命令请参考 [rush 文档](https://rushjs.io/zh-cn/pages/intro/welcome/)
