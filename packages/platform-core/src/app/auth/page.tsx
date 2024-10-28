@@ -78,7 +78,7 @@ const Auth = () => {
 								speed={20}
 								eraseSpeed={20}
 								typingDelay={200}
-								eraseDelay={500}
+								eraseDelay={1000}
 							/>
 						</div>
 					</div>
