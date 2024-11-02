@@ -27,7 +27,7 @@ jobs:
                 export PATH=$PATH:/usr/local/go/bin
                 cd /server/Platform
                 git pull
-                cd /server/Platform/server/golang
+                cd ./server/golang
                 go build .\main.go
                 .\main.exe
               EOF
