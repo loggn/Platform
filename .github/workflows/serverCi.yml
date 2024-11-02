@@ -24,10 +24,11 @@ jobs:
           run: |
             ssh-keyscan -H 60.204.240.235 >> ~/.ssh/known_hosts
             ssh -T root@60.204.240.235 << 'EOF'
-            #     sudo su
-            #     export PATH=$PATH:/usr/local/go/bin
-            #     cd /
-            #     git pull
-            #     hugo --baseURL http://60.204.240.235
+                export PATH=$PATH:/usr/local/go/bin
+                cd /server
+                git pull
+                cd /server/Platform/server/golang
+                go build .\main.go
+                .\main.exe
               EOF
     
