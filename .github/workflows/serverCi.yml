@@ -1,0 +1,33 @@
+name: serverCi
+
+on:
+    push:
+        branches:
+            -main
+
+jobs:
+    build:
+        runs-on: 
+            ubuntu-latest
+
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Set up SSH key
+          uses: webfactory/ssh_agent@v0.5.3
+          with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+        
+        - name: Deploy
+          run: |
+            ssh-keyscan -H 60.204.240.235 >> ~/.ssh/known_hosts
+            ssh -T root@60.204.240.235 << 'EOF'
+            #     sudo su
+            #     export PATH=$PATH:/usr/local/go/bin
+            #     cd /
+            #     git pull
+            #     hugo --baseURL http://60.204.240.235
+              EOF
+    
