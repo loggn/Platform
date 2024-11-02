@@ -25,7 +25,7 @@ jobs:
             ssh-keyscan -H 60.204.240.235 >> ~/.ssh/known_hosts
             ssh -T root@60.204.240.235 << 'EOF'
                 export PATH=$PATH:/usr/local/go/bin
-                cd /server
+                cd /server/Platform
                 git pull
                 cd /server/Platform/server/golang
                 go build .\main.go
