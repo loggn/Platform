@@ -30,6 +30,6 @@ jobs:
                 cd ./server/golang
                 go run ./main.go
                 ./main
-              EOF
+            EOF
 
     
