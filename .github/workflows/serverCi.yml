@@ -28,7 +28,7 @@ jobs:
                 cd /server/Platform
                 git pull
                 cd ./server/golang
-                go build ./main.go
+                go run ./main.go
                 ./main
               EOF
 
