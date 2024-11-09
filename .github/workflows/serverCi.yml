@@ -23,7 +23,7 @@ jobs:
         - name: Deploy
           run: |
             ssh-keyscan -H 60.204.240.235 >> ~/.ssh/known_hosts
-            ssh -T root@60.204.240.235 << 'EOF'
+            ssh -o ServerAliveInterval=60 -T root@60.204.240.235 << 'EOF'
                 export PATH=$PATH:/usr/local/go/bin
                 cd /server/Platform
                 git pull
